@@ -18,8 +18,8 @@ for singleLine in lineBuffer.readlines():		## Read single lines
 	if len(singleLine) >1:						## Condition for NoData Lines
 		dateChange = singleLine[0]				## Date Change for postgre timestamp 
 		dateChange = dateChange.split( "-" )	## Split date to list
-		print  "20" + dateChange[2] + "-" + dateChange[1] + "-" + dateChange[0] + " " + singleLine[1] + ":00" + " +4:00" "   | Carbon Monoxide " + singleLine[3] + " |    | C6H6 " + singleLine[15] + " |"
-		
+		dataNew = "20" + dateChange[2] + "-" + dateChange[1] + "-" + dateChange[0] + " " + singleLine[1] + ":00" + " +4:00" "   | Carbon Monoxide " + singleLine[3] + " |    | C6H6 " + singleLine[15] + " |"
+		print dataNew
 	else:
 		print singleLine[0]						## NoData Lines (for test only)
 lineBuffer.close()								## Close Line buffer
