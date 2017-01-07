@@ -31,7 +31,7 @@ for singleLine in lineBuffer.readlines():		## Read single lines
 		dateChange = singleLine[0]				## Date Change for postgre timestamp 
 		dateChange = dateChange.split( "-" )	## Split date to list
 		dateNew = "20" + dateChange[2] + "-" + dateChange[1] + "-" + dateChange[0] + " " + singleLine[1] + ":00" + " +4:00"
-		print dataNew
+		print dateNew
 		print singleLine
 #		cursor.execute("INSERT INTO etlview_serindata ( name, AGE) VALUES (%s, %s)",("leo", 26))
 	else:
