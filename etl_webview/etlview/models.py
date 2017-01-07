@@ -19,6 +19,12 @@ class SerInData(models.Model):
   rh_tg = models.CharField(max_length=200)
   noise_cop = models.CharField(max_length=200)
   noise_tg = models.CharField(max_length=200)
+  tab08_cop = models.CharField(max_length=200)
+  tab08_tg = models.CharField(max_length=200)
+  tab09_cop = models.CharField(max_length=200)
+  tab09_tg = models.CharField(max_length=200)
+  tab10_cop = models.CharField(max_length=200)
+  tab10_tg = models.CharField(max_length=200)
   def __str__(self):
     return self.hourly_date
   
