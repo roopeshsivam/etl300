@@ -5,6 +5,7 @@ from django.db import models
 # Create your models here.
 class SerInData(models.Model):
   hourly_date = models.DateTimeField()
+  display_date = models.CharField(max_length=200)
   co_cop = models.CharField(max_length=200)
   co_tg = models.CharField(max_length=200)
   o3_cop = models.CharField(max_length=200)
