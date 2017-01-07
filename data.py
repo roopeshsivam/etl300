@@ -33,7 +33,7 @@ for singleLine in lineBuffer.readlines():		## Read single lines
 		dateNew = "20" + dateChange[2] + "-" + dateChange[1] + "-" + dateChange[0] + " " + singleLine[1] + ":00" + " +4:00" "
 		print dataNew
 		print singleLine
-		cursor.execute("INSERT INTO etlview_serindata ( name, AGE) VALUES (%s, %s)",("leo", 26))
+#		cursor.execute("INSERT INTO etlview_serindata ( name, AGE) VALUES (%s, %s)",("leo", 26))
 	else:
 		print singleLine[0]						## NoData Lines (for test only)
 lineBuffer.close()								## Close Line buffer
