@@ -33,7 +33,7 @@ for singleLine in lineBuffer.readlines():		## Read single lines
 		dateNew = "20" + dateChange[2] + "-" + dateChange[1] + "-" + dateChange[0] + " " + singleLine[1] + ":00" + " +4:00"
 		appledata = dateNew, singleLine[3], singleLine[4], singleLine[7], singleLine[8], singleLine[11], singleLine[12], singleLine[15], singleLine[16], singleLine[19], singleLine[20], singleLine[23], singleLine[24], singleLine[27], singleLine[28], singleLine[31, singleLine[32], singleLine[35], singleLine[36], singleLine[39], singleLine[40]
 #		cur.execute("INSERT INTO etlview_serindata ( hourly_date, co_cop, co_tg ) VALUES (%s, %s, %s)", (dateNew, "apple", "orange"))
-		cur.execute("INSERT INTO etlview_serindata ( hourly_date, co_cop, co_tg, o3_cop, o3_tg, no2_cop, no2_tg, c6h6_cop, c6h6_tg, temp_cop, temp_tg, rh_cop, rh_tg, noise_cop, noise_tg, tab08_cop, tab08_tg, tab09_cop, tab09_tg, tab10_cop, tab10_tg) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s,%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", (appledata))
+		cur.execute("INSERT INTO etlview_serindata ( hourly_date, co_cop, co_tg, o3_cop, o3_tg, no2_cop, no2_tg, c6h6_cop, c6h6_tg, temp_cop, temp_tg, rh_cop, rh_tg, noise_cop, noise_tg, tab08_cop, tab08_tg, tab09_cop, tab09_tg, tab10_cop, tab10_tg) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s,%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", ( appledata ))
 		con.commit()
 #		cursor.execute("INSERT INTO etlview_serindata ( name, AGE) VALUES (%s, %s)",("leo", 26))
 	else:
