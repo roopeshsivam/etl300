@@ -25,7 +25,7 @@ SECRET_KEY = 'g$7ch638-v8!9gnj7s^e83_p_$jk80)1cv!&_d=4zt$v7872u6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mefuel-ajm.dyndns.org']
 
 
 # Application definition
