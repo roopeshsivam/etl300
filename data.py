@@ -1,5 +1,11 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+import psycopg2
+import sys
 import serial
 import StringIO
+
 serialIn = serial.Serial()
 serialIn.baudrate = 9600
 serialIn.timeout = 2
