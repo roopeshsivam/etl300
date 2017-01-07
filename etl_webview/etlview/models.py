@@ -27,5 +27,5 @@ class SerInData(models.Model):
   tab10_cop = models.CharField(max_length=200)
   tab10_tg = models.CharField(max_length=200)
   def __str__(self):
-    return self.hourly_date
+    return self.display_date
   
