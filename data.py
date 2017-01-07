@@ -6,6 +6,10 @@ import sys
 import serial
 import StringIO
 
+DB_hostname = 'localhost'
+DB_username = 'etl_ps_user'
+DB_password = 'etl_ps_user'
+DB_name = 'etldata'
 serialIn = serial.Serial()
 serialIn.baudrate = 9600
 serialIn.timeout = 2
@@ -30,3 +34,16 @@ for singleLine in lineBuffer.readlines():		## Read single lines
 		print singleLine[0]						## NoData Lines (for test only)
 lineBuffer.close()								## Close Line buffer
 serialIn.close()								## Close Serial
+con = None
+try:
+	con = psycopg2.connect(host=DB_hostname, user=DB_username, password=DB_password, dbname=DB_name)
+	cur = con.cursor()
+	cur.execute('SELECT version()')
+	ver = cur.fetchone()
+	print ver
+except psycopg2.DatabaseError, e:
+	print 'Error %s' % e
+	sys.exit(1)
+finally:
+	if con:
+		con.close()
