@@ -1,2 +1,2 @@
 # etl3000
-Collect and Display data from ETL300 Unitec SRL
+Collect and Display data from ETL3000 Unitec SRL
