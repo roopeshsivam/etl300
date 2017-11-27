@@ -8,7 +8,7 @@ import StringIO
 
 DB_hostname = 'localhost'
 DB_username = 'etl_ps_user'
-DB_password = 'etl_ps_user'
+DB_password = 'etl_ps_password'
 DB_name = 'etldata'
 con = psycopg2.connect(host=DB_hostname, user=DB_username, password=DB_password, dbname=DB_name)
 cur = con.cursor()
